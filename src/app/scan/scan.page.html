@@ -1,0 +1,17 @@
+<ion-header class="qr-header">
+    <ion-toolbar>
+        <ion-title>Scan</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="qr-content">
+    <ion-button color="warning" expand="block" (click)="ToggleLight()">
+        LIGHT
+    </ion-button>
+    <ion-button color="light" expand="block" (click)="ToggleCamera()">
+        ChangeCamera
+    </ion-button>
+    <ion-button color="success" expand="block" (click)="StartScan()">
+        SCAN
+    </ion-button>
+</ion-content>

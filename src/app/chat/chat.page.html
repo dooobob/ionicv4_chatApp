@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Chat</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="join-form-container" *ngIf="!chatInit">
+        <ion-input placeholder="Enter Chat Name" [(ngModel)]="chatName"></ion-input>
+        <ion-button expand="full" (click)="joinRoom()">
+            Join
+        </ion-button>
+    </div>
+    <div class="chat-container" *ngIf="chatInit">
+        <h5>{{chatName}}</h5>
+    </div>
+</ion-content>

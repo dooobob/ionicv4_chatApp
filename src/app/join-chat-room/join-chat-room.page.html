@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>joinChatRoom</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="room-list-container" *ngIf="RoomList.length > 0">
+        <div class="room-item" id="room-{{index}}" *ngFor="let room of RoomList; let i = index;" (click)="selectRoom(index)">
+            {{room.name}}
+        </div>
+    </div>
+    <div class="empt-list-container" *ngIf="RoomList.length < 1">
+        <h3>개설된 방이 없습니다.</h3>
+        <ion-input placeholder="Enter Chat Name" [(ngModel)]="roomName"></ion-input>
+        <ion-button expand="full" (click)="creatRoom()">
+            방만들기
+        </ion-button>
+    </div>
+</ion-content>
